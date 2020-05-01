@@ -1,26 +1,48 @@
 /****************************************
-
   CSS Reset
-
 *****************************************/
 /* Box sizing */
-html {
-  box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
-/* Set core body defaults */
-body {
-  margin: 0;
-  min-height: 100vh;
+html {
+  font-size: 16px;
   scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
+}
+
+/* Remove default margins */
+blockquote,
+body,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+ol,
+p,
+pre,
+ul {
+  margin: 0;
+}
+
+/* Remove default padding */
+fieldset,
+legend {
+  padding: 0;
+}
+
+/* Set body defaults */
+body {
   line-height: 1.5;
+  min-height: 100vh;
 }
 
 /* Remove list styles and padding on ul, ol elements with a class attribute */
@@ -30,15 +52,13 @@ ol[class] {
   padding: 0;
 }
 
-/* Anchor elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img {
-  max-width: 100%;
+/* Fix media elements */
+img,
+svg,
+video,
+iframe {
   display: block;
+  max-width: 100%;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -47,4 +67,38 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+section * {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  section * {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  section * {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
 }
