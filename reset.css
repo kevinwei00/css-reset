@@ -1,7 +1,6 @@
 /****************************************
   CSS Reset
 *****************************************/
-/* Box sizing */
 *,
 *::before,
 *::after {
@@ -11,9 +10,15 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  height: -webkit-fill-available;
 }
 
-/* Remove default margins */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  min-height: -webkit-fill-available; /* https://css-tricks.com/css-fix-for-100vh-in-mobile-webkit */
+}
+
 blockquote,
 body,
 fieldset,
@@ -33,26 +38,17 @@ ul {
   margin: 0;
 }
 
-/* Remove default padding */
 fieldset,
 legend {
   padding: 0;
 }
 
-/* Set body defaults */
-body {
-  line-height: 1.5;
-  min-height: 100vh;
-}
-
-/* Remove list styles and padding on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
   list-style: none;
   padding: 0;
 }
 
-/* Fix media elements */
 img,
 svg,
 video,
@@ -61,44 +57,9 @@ iframe {
   max-width: 100%;
 }
 
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
 select {
   font: inherit;
-}
-
-section {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-section * {
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-@media (min-width: 768px) {
-  section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  section * {
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
-  section * {
-    padding-right: 4rem;
-    padding-left: 4rem;
-  }
 }
